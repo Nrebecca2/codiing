@@ -1,0 +1,66 @@
+#include<iostream>
+#include<stdio.h>
+#include<string.h>
+
+using namespace std;
+
+class wallet
+{
+        int acno;
+        char nm[100], acctype[100];
+        float bal;  
+   public:
+        wallet( char*name, float initial)  //Parameterized Constructor
+        {
+            char *name;
+            bal=initial;
+        }
+        void send();
+        void recieve();
+        void display();
+};
+void wallet::send()   //sending  money
+{
+        int w;
+        cout<<"\n Enter money to send = ";
+        cin>>w;
+        bal+=w;
+}
+void wallet::recieve()  //recieiving money
+{
+        int w;
+        cout<<"\n The received money = ";
+        cin>>w;
+        if(w=1&&w<10000)
+        
+                cout<<"\n No transaction fee ";
+        elseif(w= 10000&&w<100000)        
+                cout<<"\n The transaction fee of Rwf 200 ";
+        else    (w>=100000)    
+                cout<<"\n The transaction fee of Rwf 1,000 ";
+}
+void wallet::display()  //displaying the details
+{
+        cout<<"\n ----------------------";
+        cout<<"\n Accout No. : "<<acno;
+        cout<<"\n Name : "<<nm;
+        cout<<"\n Balance : "<<bal;  
+}
+int main()
+{
+        char name[100];
+        float initial;
+        cout<<"\n Enter Details: \n";
+        cout<<"-----------------------";
+        cout<<"\n Name : ";
+        cin>>name;
+        cout<<"\n Initial Balance : ";
+        cin>>initial;
+  
+        wallet e1( name, balance);  //object is created
+        e1.send(); 
+        e1.receive(); 
+        return 0;
+}
+	return 0;
+}
