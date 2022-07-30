@@ -55,7 +55,7 @@ int main()
         cout<<"\n Initial Balance : ";
         cin>>initial;
   
-        wallet e1( name, balance);  //object is created
+        wallet e1( name, initial);  //object is created
         e1.send(); 
         e1.receive(); 
         return 0;
