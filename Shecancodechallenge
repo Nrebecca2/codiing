@@ -6,13 +6,12 @@ using namespace std;
 
 class wallet
 {
-        int acno;
-        char nm[100], acctype[100];
+        char nm[100];
         float bal;  
    public:
         wallet( char*name, float initial)  //Parameterized Constructor
         {
-            char *name;
+            nm = name;
             bal=initial;
         }
         void send();
@@ -42,7 +41,6 @@ void wallet::recieve()  //recieiving money
 void wallet::display()  //displaying the details
 {
         cout<<"\n ----------------------";
-        cout<<"\n Accout No. : "<<acno;
         cout<<"\n Name : "<<nm;
         cout<<"\n Balance : "<<bal;  
 }
